@@ -1,5 +1,7 @@
 # ElasticFusion on Jetson Xavier
 
+当年做毕设踩的一些坑，留这里记录一下。
+
 ## 环境配置
 
 安装依赖
@@ -8,7 +10,7 @@
 sudo apt-get install -y cmake-qt-gui git build-essential libusb-1.0-0-dev libudev-dev openjdk-8-jdk freeglut3-dev libglew-dev libsuitesparse-dev libeigen3-dev zlib1g-dev libjpeg-dev
 ```
 
-nmd,wsm？中间发现包下不下来，我以为是代理出问题了，看了一下是连不上，结果调了半天还是连不上，然后ping了一下国内的网站也ping不通，才发现网口没网，我以为网口出了问题，最后捣鼓半天，去network里设置代理的时候才发现不知道飞行模式为什么开了。
+中间发现包下不下来，我以为是代理出问题了，看了一下是连不上，结果调了半天还是连不上，然后ping了一下国内的网站也ping不通，才发现网口没网，我以为网口出了问题，最后捣鼓半天，去network里设置代理的时候才发现不知道飞行模式为什么开了。
 
 
 测试`proxychains`
