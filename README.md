@@ -246,7 +246,7 @@ sudo ldconfig
 set(CUDA_ARCH_BIN "30 35 50 52 61" CACHE STRING "Specify 'real' GPU arch to build binaries for, BIN(PTX) format is supported. Example: 1.3 2.1(1.3) or 13 21(13)")
 ```
 
-根本不是这个问题，在[墨釉](https://www.twblogs.net/a/5c547855bd9eee06ef365316/zh-cn)的博客中找到了答案，就是上面在每次`make`后要执行`sudo make install`与`sudo ldconfig`来找到动态链接库，否则测试数据集的时候会出错。
+但是试了一下发现根本不是这个问题，在[墨釉](https://www.twblogs.net/a/5c547855bd9eee06ef365316/zh-cn)的博客中找到了答案，就是上面在每次`make`后要执行`sudo make install`与`sudo ldconfig`来找到动态链接库，否则测试数据集的时候会出错。
 
 重建之后的结果。
 
