@@ -1,7 +1,4 @@
-# ElasticFusion-on-Jetson-Xavier
-Implement ElasticFusion on Nvidia Jetson Xavier
-
-当年做毕设记录的一些配置，虽然现在没在做这个方向了，扔出来记录一下。
+# ElasticFusion on Jetson Xavier
 
 ## 环境配置
 
@@ -11,7 +8,8 @@ Implement ElasticFusion on Nvidia Jetson Xavier
 sudo apt-get install -y cmake-qt-gui git build-essential libusb-1.0-0-dev libudev-dev openjdk-8-jdk freeglut3-dev libglew-dev libsuitesparse-dev libeigen3-dev zlib1g-dev libjpeg-dev
 ```
 
-中间发现包下不下来，我以为是代理出问题了，看了一下是连不上，结果调了半天还是连不上，然后ping了一下国内的网站也ping不通，才发现网口没网，我以为网口出了问题，最后捣鼓半天，去network里设置代理的时候才发现不知道飞行模式为什么开了。
+nmd,wsm？中间发现包下不下来，我以为是代理出问题了，看了一下是连不上，结果调了半天还是连不上，然后ping了一下国内的网站也ping不通，才发现网口没网，我以为网口出了问题，最后捣鼓半天，去network里设置代理的时候才发现不知道飞行模式为什么开了。
+
 
 测试`proxychains`
 
@@ -94,7 +92,7 @@ sudo apt-get install -y cmake-qt-gui git build-essential libusb-1.0-0-dev libude
 ---
 
 - 在上面cmake一步就遇到了问题，因为之前编译的路径不同有缓存，两者不匹配了。解决办法把build文件夹删了重新建一个，或者`make clean`也可以。
-- 一路下来没什么问题，不过NIViewer我运行不了，本来的项目了就没有，不管了，我就当可以用吧。（后来证明其实没问题）
+- 一路下来没什么问题，不过NIViewer我运行不了，不过不影响编译。（后来证明其实没问题）
 
 ## 安装Pangolin 
 
@@ -218,7 +216,7 @@ sudo ldconfig
 
 把`ElasticFusion/Core/src/FindSuiteSparse.cmake`里面的内容用附件中的文件内容替换
 
-[FindSuiteSparse.cmake](https://ryushane.top/usr/uploads/2019/11/1135865494.txt)
+[FindSuiteSparse.cmake](https://ryushane.com/usr/uploads/2019/11/1135865494.txt)
 
 ---
 
@@ -252,5 +250,5 @@ set(CUDA_ARCH_BIN "30 35 50 52 61" CACHE STRING "Specify 'real' GPU arch to buil
 
 ![final](https://cdn.jsdelivr.net/gh/Ryushane/PicGo_Pictures/img/reconstruction.png)
 
-[1]: https://ryushane.top/usr/uploads/2019/11/1135865494.txt	"FindSuiteSparse.cmake"
+[1]: https://ryushane.com/usr/uploads/2019/11/1135865494.txt	"FindSuiteSparse.cmake"
 
